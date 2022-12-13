@@ -1,5 +1,4 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'development',
@@ -16,14 +15,11 @@ module.exports = {
         runtimeChunk: 'single',
     },
     */
-    plugins: [
-        new MiniCssExtractPlugin(),
-    ],
     module: {
         rules: [
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader'],         //here, webpack will apply loaders from last to first. (css then style)
+                use: ['style-loader', 'css-loader'],         //here, webpack will apply loaders from last to first. (css then style)
             },
         ],
     },

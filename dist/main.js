@@ -7,16 +7,15 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/header.js":
-/*!***********************!*\
-  !*** ./src/header.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ "./src/globals.js":
+/*!************************!*\
+  !*** ./src/globals.js ***!
+  \************************/
+/***/ ((module) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction createHeader(){    \r\n    const content = document.getElementById('content');\r\n    \r\n    const header = document.createElement('header')\r\n    \r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHeader);\n\n//# sourceURL=webpack://top-p-restaurant-page/./src/header.js?");
+eval("module.exports = {\r\n    name: 'Chez Mémé',\r\n    moto: \"La cusine à l'ancienne\",\r\n    colors: {\r\n        first: '#F5EFE6',\r\n        second: '#E8DFCA',\r\n        third: '#AEBDCA',\r\n        fourth: '#7895B2' \r\n    }\r\n}\n\n//# sourceURL=webpack://top-p-restaurant-page/./src/globals.js?");
 
 /***/ }),
 
@@ -26,7 +25,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n//index.js is the main source js, it will only be used to import site elements\r\n\r\n\r\n\r\nconsole.log('index.js loaded')\n\n//# sourceURL=webpack://top-p-restaurant-page/./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _website_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./website-core */ \"./src/website-core.js\");\n//index.js is the main source js, it will only be used to import site elements\r\nconsole.log('index.js loaded')\r\n\r\n;\r\n\r\n(0,_website_core__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n\r\n\r\n/*\r\nimport createHeader from \"./header\";\r\nimport \"./style.css\"\r\n\r\ncreateHeader();\r\n*/\n\n//# sourceURL=webpack://top-p-restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/website-core.js":
+/*!*****************************!*\
+  !*** ./src/website-core.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _globals__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./globals */ \"./src/globals.js\");\n/* harmony import */ var _globals__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_globals__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nfunction initilizeWebsiteCore(){\r\n    document.title = (_globals__WEBPACK_IMPORTED_MODULE_0___default().name);\r\n    const h1 = document.querySelector('h1')\r\n    h1.textContent = (_globals__WEBPACK_IMPORTED_MODULE_0___default().name);\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initilizeWebsiteCore);\n\n//# sourceURL=webpack://top-p-restaurant-page/./src/website-core.js?");
 
 /***/ })
 
@@ -57,6 +68,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _hea
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
