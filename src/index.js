@@ -7,8 +7,13 @@ import initilizeWebsiteCore from "./website-core";
 initilizeWebsiteCore()
 
 
-/*
-import createHeader from "./header";
 
-createHeader();
-*/
+function listenForNavClicks(element, enable){
+    
+    accueilNav.addEventListener('click', () => console.log('ok'))
+    return{
+
+    }
+}
+
+

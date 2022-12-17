@@ -16,23 +16,28 @@ font-family: 'Unbounded', cursive;
 
     --grid-rows-height: 400px;
 
-    --color-clear-white: 245, 239, 229;
+    --color-light-white: 245, 239, 229;
     --color-dark-white: 232, 223, 202;
-    --color-clear-blue: 174, 189, 202;
+    --color-light-blue: 174, 189, 202;
     --color-dark-blue: 120, 149, 178;
 }
 
+/* COMMON */
+
 *{
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 h1, h2, h3, h4, h5, h6, .motto{
     font-family: 'Shadows Into Light', cursive;
+    line-height: 100%;
     margin: 0;
 }
 h1 {font-size: 3.5rem;}
 h2 {font-size: 2.5rem;}
 h3 {font-size: 2rem;}
+.motto {font-size: 1.5rem;}
 
 body{
     background-image: url(./img/background-wallpaper.jpg);
@@ -44,46 +49,44 @@ body{
     max-width: 100%;
 }
 
+/* HEADER */
+
 header{
-    height: clamp(150px, 30vh, 200px);
-    background-color: rgba(var(--color-clear-white), .3);
+    height: clamp(150px, 20vh, 150px);
+    width: 100%;
+    background-color: rgba(var(--color-light-white), .3);
     backdrop-filter: blur(3px);
     box-shadow: var(--box-shadow);
     
+    padding: 20px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+/* MAIN */
+
+#main{
+    width: 100vw;
+    max-width: inherit;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    
+    padding: 100px;
 }
 
-#upper-header{
+#main > nav{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: flex-end;
+}
+
+#main > nav > div{
     height: 70%;
-    display: flex;
-    align-items: center;
-}
-
-#upper-header h1 {
-    margin: 0;
-}
-
-
-#lower-header{
-    height: 30%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-#lower-header > nav{
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#lower-header > nav > div{
-    height: 100%;
     width: 120px;
     display: flex;
     justify-content: center;
@@ -99,61 +102,59 @@ header{
     font-size: 1.5rem;
 }
 
-/* MAIN */
+    /* effects */
 
-#main{
-    width: 100vw;
-    max-width: inherit;
-    display: flex;
-    justify-content: center;
+#main > nav > div:hover{
+    height: 200%;
 }
+
+/* MAIN > CONTAINER */
 
 #container{
     background-image: url(./img/seamless-paper.jpg);
     box-shadow: var(--box-shadow-main);
-    height: ;
-    width: 100%;
-    margin: 100px 400px;
+    width: 80vw;
     padding: var(--grid-gap);
     display: grid;
     gap: var(--grid-gap);
     align-items: center;
-    grid-template-rows: auto auto .5fr repeat(3, var(--grid-rows-height));
+    grid-template-rows: auto repeat(3, var(--grid-rows-height));
 }
-
+/*
 #container > *{
     width: 100%;
     height: 100%;
     font-family: 'Courier New', Courier, monospace;
 }
-
-#container > #title{
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-#container > hr{
-    height: min-content;
-    width: 60%;
-    border: 1px solid none;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
+*/
 
 #container > .content{
     background-color: rgba(var(--color-dark-blue), .2);
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto minmax(400px, 1fr);
     padding: 25px;
     gap: 25px;
+}
+
+.content-text{
+    display: grid;
+    gap: 25px;
+    align-content: start;
 }
 
 /* FOOTER */
 
 footer{
     height: 40px;
-    background-color: rgba(var(--color-clear-white), .3);
+    background-color: rgba(var(--color-light-white), .3);
     backdrop-filter: blur(3px);
     box-shadow: var(--box-shadow-footer);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 1000;
+}
+
+footer a{
+    color: black;
 }

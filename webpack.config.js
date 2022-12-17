@@ -7,6 +7,7 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
     },
+    devtool: "eval-source-map",
     devServer: {
         static: './dist'                                                    //tells webpack-dev-server where to look for the output files
     },
