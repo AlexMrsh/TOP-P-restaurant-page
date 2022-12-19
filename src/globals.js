@@ -8,7 +8,7 @@ module.exports = {
         fourth: '#7895B2' 
     },
     accueil:{
-        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere minima placeat est perspiciatis, assumenda magni. Eum temporibus, deleniti consequuntur sunt a reprehenderit velit quidem necessitatibus aliquid esse, harum maiores. Quaerat!',
+        description: 'Accueil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere minima placeat est perspiciatis, assumenda magni. Eum temporibus, deleniti consequuntur sunt a reprehenderit velit quidem necessitatibus aliquid esse, harum maiores. Quaerat!',
         content:{
             content1:{
                 imgLink: 'https://picsum.photos/350',
@@ -25,6 +25,12 @@ module.exports = {
                 title: "C'est fait maison !",
                 description: "Tous nos plats sont préparés à partir d'ingrédients frais. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere minima placeat est perspiciatis, assumenda magni. Eum temporibus, deleniti consequuntur sunt a reprehenderit velit quidem necessitatibus aliquid esse, harum maiores. Quaerat! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere minima placeat est perspiciatis, assumenda magni. Eum temporibus, deleniti consequuntur sunt a reprehenderit velit quidem necessitatibus aliquid esse, harum maiores. Quaerat!"
             },
+        },
+    },
+    menu:{
+        description: 'Menu. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere minima placeat est perspiciatis, assumenda magni. Eum temporibus, deleniti consequuntur sunt a reprehenderit velit quidem necessitatibus aliquid esse, harum maiores. Quaerat!',
+        content:{
+            
         },
     },
     nav:{

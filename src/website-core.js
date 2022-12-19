@@ -3,12 +3,15 @@ import createHeader from "./createHeader";
 import createMainDiv from "./createMain";
 import createFooter from "./createFooter";
 import initilizeWebsiteAccueil from "./website-accueil";
+import initilizeWebsiteMenu from "./website-menu";
 
 function initilizeWebsiteCore(){
     createHeader();
     createMainDiv();
     createFooter();
     initilizeWebsiteContent();
+    // initilizeWebsiteAccueil();
+    initilizeWebsiteMenu();
 }
 
 function initilizeWebsiteContent(){
@@ -18,8 +21,6 @@ function initilizeWebsiteContent(){
     const header = document.querySelector('header')
     const headerMotto = header.querySelector('.motto')
     headerMotto.textContent = globals.motto
-    
-    initilizeWebsiteAccueil();
 }
 
 export default initilizeWebsiteCore;
