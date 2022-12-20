@@ -30,7 +30,13 @@ module.exports = {
     menu:{
         description: 'Menu. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere minima placeat est perspiciatis, assumenda magni. Eum temporibus, deleniti consequuntur sunt a reprehenderit velit quidem necessitatibus aliquid esse, harum maiores. Quaerat!',
         content:{
-            
+
+        },
+    },
+    contact:{
+        description: 'Contact. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere minima placeat est perspiciatis, assumenda magni. Eum temporibus, deleniti consequuntur sunt a reprehenderit velit quidem necessitatibus aliquid esse, harum maiores. Quaerat!',
+        content:{
+
         },
     },
     nav:{
@@ -43,3 +49,4 @@ module.exports = {
         gitHubLink: 'https://github.com/AlexMrsh/',
     },
 }
+

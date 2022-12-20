@@ -3,15 +3,13 @@ import createHeader from "./createHeader";
 import createMainDiv from "./createMain";
 import createFooter from "./createFooter";
 import initilizeWebsiteAccueil from "./website-accueil";
-import initilizeWebsiteMenu from "./website-menu";
 
 function initilizeWebsiteCore(){
     createHeader();
     createMainDiv();
     createFooter();
     initilizeWebsiteContent();
-    // initilizeWebsiteAccueil();
-    initilizeWebsiteMenu();
+    initilizeWebsiteAccueil();
 }
 
 function initilizeWebsiteContent(){
